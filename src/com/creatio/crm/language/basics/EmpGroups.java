@@ -2,30 +2,25 @@ package com.creatio.crm.language.basics;
 
 public class EmpGroups {
 	
-	String[] Name;
-	int [] ID;
-	
-	EmpGroups (Employees emp){
 		
-		this.Name = emp.EmpNames;
-		this.ID = emp.EmpID;
-		
-	}
-	
-	public void empData() {
-		
-		for(int i=0; i<Name.length; i++) {
-			System.out.println("Employee Name:" +Name[i]+  "   Employee ID:" +ID[i]);
-		}
-	}
-	
-	
-	
 	public static void main(String[] args) {
 		
-		Employees obj = new Employees();
-		EmpGroups obj1 = new EmpGroups(obj);
-		obj1.empData();
+		String [] names = new String[3];
+		int [] id = new int[3];
+		
+		Employees emp = new Employees();
+		
+		names[0]= emp.empName1;
+		names[1]=emp.empName2;
+		names[2]=emp.empName3;
+		
+		id[0]=emp.empId1;
+		id[1]=emp.empId2;
+		id[2]=emp.empId3;
+		
+		System.out.println("Employee Name:" +names[0]+ "Employee ID:"+id[0]);
+		System.out.println("Employee Name:" +names[1]+ "Employee ID:"+id[1]);
+		System.out.println("Employee Name:" +names[2]+ "Employee ID:"+id[2]);
 	}
 	
 	
