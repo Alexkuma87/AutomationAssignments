@@ -21,14 +21,12 @@ public class String_Assignments13 {
 
 		String  reverseWord="";
 
-		for (String word : count) {
-
-			for(int i=word.length()-1; i>=0; i--) {
-				reverseWord+=word.charAt(i);
-			}
-			reverseWord+=" ";
-
+		for(int i=sentance.length()-1; i>=0; i--) {
+			reverseWord+=sentance.charAt(i);
 		}
+		reverseWord+=" ";
+
+
 
 
 		System.out.println("Words in Reverse Order :"+reverseWord);	
@@ -49,13 +47,14 @@ public class String_Assignments13 {
 		System.out.print(reqString);
 		System.out.println();
 
-		System.out.println("*********Occurrences***********");
+		System.out.println("*********Occurrence***********");
 
 		String paragraph ="Java is a popular programming language. Java is used for web development, mobile applications, and more.";
 
 		String targetWord = "Java";
 
 		int count1=0;
+		int indexValue=0;
 
 		paragraph = paragraph.toLowerCase();
 		targetWord = targetWord.toLowerCase();
@@ -66,11 +65,14 @@ public class String_Assignments13 {
 			if(word.equals(targetWord)) {
 				count1++;
 			}
-			System.out.println(word);
+			System.out.println(word+" "+word.length());
+
 		}
+		
+		
 
 		System.out.println("The word " +targetWord+ " appears " +count1+ " times.");
-			
+
 
 
 
